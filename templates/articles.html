@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+<hr>
+<h3 style="text-align:center">Articles</h3>
+<hr>
+{% if articles %}
+
+<ul class="list-group">
+   {% for article in articles %}
+   <li class="list-group-item list-group-item-info"><a href="article/{{article.id}}">{{article.title}}</a></li>
+   {% endfor %}
+</ul>
+
+
+{% else %}
+<div class = "alert alert-danger">There are currently no articles on this blog</div>
+{% endif %}
+
+
+{% endblock body %}

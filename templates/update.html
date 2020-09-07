@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+<hr>
+<h3 style="text-align:center">Article Update</h3>
+<hr>
+{% from "includes/formhelpers.html" import render_field %}
+
+<form method="post" style="text-align:center">
+  
+  
+    {{ render_field(form.title, class="form-control") }}
+    {{ render_field(form.content, class="form-control") }}
+    
+  
+    <button type="submit" class="btn btn-info"> Update </button>
+
+</form>
+{% endblock body %}

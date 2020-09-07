@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<hr>
+<h3 style="text-align:center"> Login please</h3>
+<hr>
+
+{% from "includes/formhelpers.html" import render_field %}
+
+
+<form method="post" style="text-align:center">
+  
+  
+    {{ render_field(form.username) }}
+    {{ render_field(form.password) }}
+    
+  
+    <button type="submit" class="btn btn-info">Log in</button>
+
+</form>
+
+{% endblock body %}
